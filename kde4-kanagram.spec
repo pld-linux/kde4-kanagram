@@ -4,12 +4,12 @@
 Summary:	K Desktop Environment - Guess anagram game
 Summary(pl.UTF-8):	K Desktop Environment - Gra w zgadywanie anagramów
 Name:		kanagram
-Version:	4.7.1
-Release:	3
+Version:	4.7.3
+Release:	1
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	a0643cbf4b8bb6a992f73e85263a8b45
+# Source0-md5:	b17de32ea9e22738c773b3188128609d
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdelibs-devel >= %{version}
