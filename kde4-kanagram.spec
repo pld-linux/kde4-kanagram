@@ -1,21 +1,23 @@
 %define		_state		stable
-%define		qtver		4.7.4
+%define		orgname		kanagram
+%define		qtver		4.8.0
 
 Summary:	K Desktop Environment - Guess anagram game
 Summary(pl.UTF-8):	K Desktop Environment - Gra w zgadywanie anagramów
-Name:		kanagram
-Version:	4.7.3
+Name:		kde4-kanagram
+Version:	4.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Science
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{name}-%{version}.tar.bz2
-# Source0-md5:	b17de32ea9e22738c773b3188128609d
+Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
+# Source0-md5:	e4768621391911542d2986a3571a0c3f
 URL:		http://www.kde.org/
 BuildRequires:	cmake >= 2.8.0
 BuildRequires:	kde4-kdelibs-devel >= %{version}
-BuildRequires:	libkdeedu-devel >= %{version}
+BuildRequires:	kde4-libkdeedu-devel >= %{version}
 Requires:	kde4-kdebase >= %{version}
 Obsoletes:	kde4-kdeedu-kanagram < 4.6.99
+Obsoletes:	kanagram < 4.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,7 +27,7 @@ Guess anagram game.
 Gra w zgadywanie anagramw.
 
 %prep
-%setup -q
+%setup -q -n %{orgname}-%{version}
 
 %build
 install -d build
@@ -48,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kanagram
